@@ -1,0 +1,79 @@
+{% extends "source.html" %}
+{% load static %}
+{% block title %}
+Collections
+{% endblock title %}
+{% block content %}
+    <div class=main>
+        <div class="blog-header" id="container">
+            <div class="blog-box1">
+                <p class="blog-p">OUR COLLECTION</p>
+                <h1 class="blog-drinks">
+                    Discover Your<br> 
+                </h1>
+                <h1 class="blog-red">Perfect Drinks</h1>
+                <p class="blog-our">
+                    Explore our refreshing collection of drinks,<br>
+                    carefully selected for every mood and every moment.
+                </p>
+            </div>
+
+            <hr>
+            <section class="blog-box6">
+                <p class="blog-pip">SOFT DRINKS</p>
+                <div class="blog-bx5">
+                  <div class="blog-bx1">
+                            <div class="blog-bx2">
+                            <div class="blog-media">
+                                <img src="{% static 'img/coca_cola.png' %}">
+                            </div>
+                            <div class="blog-info">
+                                <h3 class="blog-cola">Coca_Cola</h3>
+                                <p class="blog-taste">Original Drink</p>
+                                <span class="blog-span">₦1,750</span>
+                            </div>
+                            <a href="{% url 'cart' %}"><button class="blog-cross">+</button></a>
+                        </div>
+                    </div>
+
+                    <div class="blog-bx1">
+                        <div class="blog-bx2">
+                            <div class="blog-media">
+                                <img src="{% static 'img/fanta.png' %}">
+                            </div>
+                            <div class="blog-info">
+                                <h3 class="blog-cola">Fanta</h3>
+                                <p class="blog-taste">Orange</p>
+                                <span class="blog-span">₦1,750</span>
+                            </div>
+                            <a href="{% url 'cart' %}"><button class="blog-cross">+</button></a>
+                        </div>
+                    </div>
+
+                    <div class="blog-bx1">
+                        <div class="blog-bx2">
+                            <div class="blog-media">
+                                <img src="{% static 'img/smoov.JPG' %}">
+                            </div>
+                            <div class="blog-info">
+                                <h3 class="blog-cola">Smoov</h3>
+                                <p class="blog-taste">Chapman</p>
+                                <span class="blog-span">₦1,750</span>
+                            </div>
+                            <a href="{% url 'cart' %}"><button class="blog-cross">+</button></a>
+                        </div>
+                    </div>
+
+                    <div class="blog-box4">
+                        <div class="blog-box3">
+                            <a href="{% url 'more' %}"><button class="blog-buton">
+                                Explore more 
+                                <i class="fa-solid fa-arrow-right-long"></i>
+                            </button></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+{% endblock content%}  

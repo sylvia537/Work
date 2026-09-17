@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/page.css' %}">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>OKWUSON</title>
+</head>
+<body>
+    <div class="container">
+        <section class="sec">
+            <div class="box1">
+                <div class="side1">
+                    <div>
+                        <a href="{% url 'more' %}"><button class="arrow">
+                            Back 
+                            <i class="fa-solid fa-arrow-left-long"></i>
+                        </button></a>
+                    </div>
+                </div>
+                <div class="side">
+                    <div>
+                        <a href="{% url 'more' %}"><button class="arrow1">
+                            More 
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </button></a>
+                    </div>
+                </div>
+                <div class="box2">
+                    <img src="{{ single_about.media.url }}" alt="Image" class="image">
+                    <div class="info">
+                        <p class="cola">
+                            {{ single_about.header }}
+                        </p>
+                        <p class="taste">
+                            {{ single_about.content }}
+                        </p>
+                    </div>
+                    <hr>
+                    <div class="box4">
+                        <div class="box3">
+                            <p>
+                                <i class="fa-solid fa-check"></i>
+                                Free Shipping
+                            </p>
+                            <hr>
+                            <p>
+                                <i class="fa-solid fa-check"></i>
+                                ₦1,600 Credit For delay.
+                            </p>
+                        </div>
+                        <div class="ref">
+                            Assorted refreshing {{ single_about.header }}
+                        </div>
+                        <div class="rate">
+                            <p class="rode">
+                                <i class="fa-regular fa-star"></i>
+                                Ratings
+                            </p>
+                            <div class="four">
+                                <p>
+                                    4.7
+                                    <i class="fa-solid fa-star"></i>                           
+                                </p>
+                                <hr>
+                                <p>6.6k+ sold</p>
+                            </div>
+                        </div>
+
+                        <div class="bx5">
+                            <p class="text">
+                                {{ single_about.text }}
+                            </p>
+                            <div class="wow">
+                                <p class="of">ALMOST SOLD OUT</p>
+                                <div class="box5">
+                                    <i class="fa-regular fa-circle-question"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>   
+        </section>
+    </div>    
+</body>
+</html>

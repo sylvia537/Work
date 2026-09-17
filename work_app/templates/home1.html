@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OKWUSON</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="box1">
+            <img src="{% static 'img/1EE9C310-4787-46D1-A04B-232A42AF9910.png' %}" width="400" height="400">
+        </div>
+        <div class="box2"></div>
+    </div>
+</body>
+</html>
+
+    <a href="#container">
+    <div class="welcome_screen" id="welcome_screen">
+            <h1 class="title">Drinkable</h1>
+            <p class="subtitle">Welcome Back!</p>
+        
+            <img class="graphic" src="{% static 'img/coke.jpeg' %}" alt="Drinkable">
+            <p class="instruction">Click anywhere to continue</p>
+    </div>
+    </a>
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>OKWUSON</title>
+</head>
+<body>
+    <div class=main>
+        <div class="container">
+            <img src="{% static 'img/chatgpttt.png' %}" height="100" width="100" class="we">
+            <h1 class="hi">OKWUSON</h1>
+                <div class="solid">
+                    <div class="toggle">
+                        <div class="t-header" onclick="toggleMenu()" style="cursor: pointer;">
+                            <i class="fa-solid fa-bars"></i>
+                        </div>
+                        <div id="dropdown-content" class="t-content">
+                            <p class="of">
+                                <input type="text" size="50" name="Search..." placeholder="Search" class="names">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="solid">
+                    <a href="{% url 'cart' %}"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                <div class="solid">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'blog' %}">Collections</a></li>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'contact' %}">Contact </a></li>
+                </ul>
+            </div>

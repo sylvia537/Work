@@ -1,0 +1,167 @@
+{% extends "source.html" %}
+{% load static %}
+{% block title %}
+Contact
+{% endblock title %}
+{% block content %}
+    <div class=main>
+        <div class="container" id="container">
+            <div>
+                <p class="contact-p">GET IN TOUCH</p>
+                <h1 class="contact-drinks">
+                    We'd love to<br> 
+                </h1>
+                <h1 class="contact-red">Hear from you!</h1>
+                <p class="contact-goal">
+                    Have a question, suggestion or you'd like to place<br>
+                    an order? send a message and reach us through <br>
+                    any of the channels below.
+                </p>
+            </div>
+
+            <h1 class="about">ABOUT US</h1>
+        </div>
+
+        <section class="contact-sec">
+            <div class="contact-freq">
+                <h2 class="contact-ask">Frequently Asked Questions</h2>
+                <div class="contact-wow">
+                    <div class="contact-box1">
+                        <i class="fa-regular fa-circle-question"></i>
+                    </div>
+                    <p class="contact-of">What types of drinks do you offer?</p>
+                    <div class="contact-down">
+                        <details class="contact-toggle">
+                            <summary class="t-header">
+                            </summary>
+                            <div class="t-content">
+                                <p class="contact-of">
+                                    visit Collections.
+                                </p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <div class="contact-wow">
+                    <div class="contact-box1">
+                        <i class="fa-regular fa-circle-question"></i>
+                    </div>
+                    <p class="contact-of">Do you offer delivery?</p>
+                    <div class="contact-done">
+                        <details class="contact-toggle">
+                            <summary class="t-header">
+                            </summary>
+                            <div class="t-content">
+                                <p class="contact-of">
+                                    Yes we offer delivery.
+                                </p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <div class="contact-wow">
+                    <div class="contact-box1">
+                        <i class="fa-regular fa-circle-question"></i>
+                    </div>
+                    <p class="contact-of">Is this a long term business?</p>
+                    <div class="contact-dawn">
+                        <details class="contact-toggle">
+                            <summary class="t-header">
+                            </summary>
+                            <div class="t-content">
+                                <p class="contact-of">
+                                    Yes it is a Long Term business.
+                                </p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="contact-info_1">
+            <div class="contact-bx10">
+                <div class="contact-bx9">
+                    <h2 class="contact-cs">Contact Information</h2>
+                    <div class="contact-row">
+                        <div class="contact-box1">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>    
+                            <p class="contact-num">08148451513</p>
+                            <p class="contact-subtext">Mon - Sat: 8:00am - 6:00pm</p>
+                        </div>
+                    </div><br>
+                    
+                    <div class="contact-row">
+                        <div class="contact-box1">
+                            <i class="fa-regular fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>    
+                            <p class="contact-num">oventures@gmail.com</p>
+                            <p class="contact-subtext">We reply in 24 hours.</p>
+                        </div>
+                    </div><br>
+
+                    <div class="contact-row">
+                        <div class="contact-box1">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Address</h3>    
+                            <p class="contact-num">SHOP 61 BLOCK C WUSE MODERN MARKET ABUJA,FCT </p>
+                            <p class="contact-subtext">ABUJA</p>
+                        </div>
+                    </div><br>
+
+                    <div class="contact-row">
+                        <div class="contact-box1">
+                            <i class="fa-regular fa-comment"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>FOLLOW US</h3>    
+                            <p class="contact-number">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </p>
+                            <p class="contact-number">
+                                <i class="fa-brands fa-instagram"></i>
+                            </p>
+                            <p class="contact-number">
+                                <i class="fa-brands fa-twitter"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-column">
+                    <h2 class="contact-css">Send Us a Message</h2>
+                    <form>
+                        <div class="contact-mail">
+                            <div class="contact-text">
+                                <input type="text" size="50" name="Your name" placeholder="Your Name" class="contact-names">
+                            </div>
+                            <div class="contact-email">
+                                <input type="text" size="50" name="email" placeholder="Your Email" class="contact-names"><br><br>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="text" size="115" name="Subject" placeholder="Subject" class="contact-names"><br><br>
+                        </div><br>
+                        <div>
+                        <textarea name="" id="" cols="107" rows="18" placeholder="Your Message" class="contact-names"></textarea><br> 
+                        </div>
+                        <div class="contact-box34">
+                            <button class="contact-button">
+                                SEND MESSAGE
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock content %}

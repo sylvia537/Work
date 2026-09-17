@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/more.css' %}">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>OKWUSON</title>
+</head>
+
+<body>
+    <div class=main>
+        <div class="container">
+            <img src="{% static 'img/chatgpttt.png' %}" height="100" width="100" class="we">
+            <h1 class="hi">OKWUSON</h1>
+            <div class="solid">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'blog' %}">Collections</a></li>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'contact' %}">Contact </a></li>
+                </ul>
+            </div>
+
+            <div class="box1">
+                <p class="p">OUR COLLECTION</p>
+                <h1 class="drinks">
+                    Discover Your<br> 
+                </h1>
+                <h1 class="red">Perfect Drinks</h1>
+                <p class="our">
+                    Explore our refreshing collection of drinks,<br>
+                    carefully selected for every mood and every moment.
+                </p>
+            </div>
+
+            <hr>
+            <p class="pip">SOFT DRINKS</p>
+            <hr>
+            <section class="box6">
+                <div class="bx5">
+                    {% for About in abouts %}
+                    <div class="bx1">
+                        <div class="bx2">
+                            <div class="media">
+                                <img src="{{ About.media.url }}" alt="Image">
+                            </div>
+                            <div class="info">
+                                <p class="cola">{{ About.header}}</p>
+                                <p class="taste">{{ About.content}}</p>
+                                <p class="span">{{ About.text}}</p>
+                            </div>
+                            <a href="{% url 'page' About.pk  %}"><button class="cross">↗</button></a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+    <div class="container"> 
+        <img src="{% static 'img/chatgpt.jpeg' %}" height="100" width="100" class="we">
+        <section class="hero">
+            <div class="top">
+                <h1>OKWUSON INTEGRATED<br>VENTURES LTD</h1>
+                <p>
+                    OKWUSON INTEGRATED VENTURES LTD is a Private Company Limited By Shares
+                    that deals with Gen Merchants and Traders founded and directed by 
+                    OKWUDILI NWOYE JUDE and OKWUDILI MODESTA CHINWENDU. 
+                </p> 
+                <a href="{% url 'signup' %}"><button class="up">Get Started</button></a>
+                <div class="stat">
+                    <div>
+                        <h2>10,000,000</h2>
+                        <p>Drinks Sold</p>
+                    </div>
+                    <div>
+                        <h2>5,000,000</h2>
+                        <p>Happy Customers</p>
+                    </div>
+                    <div>
+                        <h2>100,000</h2>
+                        <p>Certifications</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="boat" alt=""></div>
+        </section>
+    </div>
+</body>
+</html>
