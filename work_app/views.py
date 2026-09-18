@@ -58,22 +58,45 @@ def signup(request):
         form = SignUpForm()
     return render(request, 'signup.html', {'form': form})
 
+from django.contrib.auth import authenticate, login
+from django.contrib import messages
+from django.shortcuts import render, redirect
+from .forms import LoginForm
+
+
 def login_view(request):
     if request.user.is_authenticated:
         return redirect('home')
 
     if request.method == 'POST':
-        form = LoginForm(data=request.POST)
+        form = LoginForm(request.POST)
+
         if form.is_valid():
             username = form.cleaned_data.get('username')
             password = form.cleaned_data.get('password1')
-            user = authenticate(request, username=username, password=password)
+
+            user = authenticate(
+                request,
+                username=username,
+                password=password
+            )
+
             if user is not None:
                 login(request, user)
-                messages.success(request, f"Welcome, {user.username}!")
+                messages.success(
+                    request,
+                    f"Welcome, {user.username}!"
+                )
                 return redirect('home')
+
+            messages.error(
+                request,
+                'Invalid username or password.'
+            )
+
     else:
         form = LoginForm()
+
     return render(request, 'login.html', {'form': form})
 
 class loginView(LoginView):
