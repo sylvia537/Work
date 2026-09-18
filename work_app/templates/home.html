@@ -1,9 +1,66 @@
-{% extends "source.html" %}
 {% load static %}
-{% block title %}
-Home
-{% endblock title %}
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>{% block title %}
+        OKWUSON
+        {% endblock title %}</title>
+</head>
+<body>
+    <div class=main>
+        <div class="container">
+            <img src="{% static 'img/chatgpttt.png' %}" height="100" width="100" class="we">
+            <h1 class="hi">OKWUSON</h1>
+                <div class="solid">
+                    <details class="search-container">
+                        <summary>
+                            <i class="fa-solid fa-bars" onclick="openSearch()"></i>
+                        </summary>
+                        <div class="log">
+                            <div id="searchBox1" class="search-box1">
+                                <li><a href="{% url 'home' %}">Home</a></li>
+                            </div>
+                            <div id="searchBox1" class="search-box1">
+                                <li><a href="{% url 'blog' %}">Collections</a></li>
+                            </div>
+                            <div id="searchBox1" class="search-box1">
+                                <li><a href="{% url 'about' %}">About Us</a></li>
+                            </div>
+                            <div id="searchBox1" class="search-box1">
+                                <li><a href="{% url 'contact' %}">Contact </a></li>
+                            </div>
+                        </div>
+                    </details>
+                    
+                </div>
+                <div class="solid">
+                    <a href="{% url 'cart' %}"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                <div class="solid">
+                    <details class="search-container">
+                        <summary>
+                            <i class="fa-solid fa-magnifying-glass search-icon" onclick="openSearch()"></i>
+                        </summary>
+                        <div id="searchBox" class="search-box">
+                            <input type="text" id="searchInput" placeholder="Search...">
+                            <i class="fa-solid fa-xmark close-search" onclick="closeSearch()"></i>
+                        </div>
+                    </details>
+                </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'blog' %}">Collections</a></li>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'contact' %}">Contact </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <div class=main>
         <div class="container" id="container">
             <div class="world">    
@@ -24,11 +81,11 @@ Home
                             </button></a>
                         </div>
                         <div class="bo5">
-                            <div class="play">
-                                <i class="fa-solid fa-play"></i> 
-                            </div>
+                            <a href="{% url 'blog' %}"><button class="buton19">
+                                Watch Video
+                                <i class="fa-solid fa-arrow-right-long"></i>
+                            </button></a>
                         </div>
-                        <p class="watch"> Watch Video</p>
                     </div>
                 </div>
             </div>
@@ -57,9 +114,11 @@ Home
                             <div class="info">
                                 <h3 class="cola">Coca Cola</h3>
                                 <p class="taste">Original Taste</p>
-                                <span class="span">₦1,750</span>
+                                <span class="span">₦10,600</span>
                             </div>
-                            <a href="{% url 'cart' %}"><button class="cross">+</button></a>
+                            <a href="{% url 'cart' %}">
+                                <button class="cross" onclick="addToCart('Coca Cola', 1750)">+</button>
+                            </a>
                         </div>
                     </div>
 
@@ -71,7 +130,7 @@ Home
                             <div class="info">
                                 <h3 class="cola">Fanta</h3>
                                 <p class="taste">Orange</p>
-                                <span class="span">₦1,750</span>
+                                <span class="span">₦10,600</span>
                             </div>
                             <a href="{% url 'cart' %}"><button class="cross">+</button></a>
                         </div>
@@ -85,7 +144,7 @@ Home
                             <div class="info">
                                 <h3 class="cola">Sprite</h3>
                                 <p class="taste">Lemon LIme</p>
-                                <span class="span">₦1,750</span>
+                                <span class="span">₦10,900</span>
                             </div>
                             <a href="{% url 'cart' %}"><button class="cross">+</button></a>
                         </div>
@@ -99,7 +158,7 @@ Home
                             <div class="info">
                                 <h3 class="cola">Martinellis</h3>
                                 <p class="taste">Apple Cider</p>
-                                <span class="span">₦1,750</span>
+                                <span class="span">₦26,999</span>
                             </div>
                             <a href="{% url 'cart' %}"><button class="cross">+</button></a>
                         </div>
@@ -273,5 +332,66 @@ Home
                 </div></a>
             </div>
         </section> 
-    </div> 
-{% endblock content %}
+    </div>
+<hr class="box">
+        <section class="box11">
+            <div class="box12">
+                <img src="{% static 'img/chatgpttt.png' %}" height="100" width="100" class="when">
+                <h1 class="hii">OKWUSON</h1>
+                <p class="pass">
+                    Great Drinks. Better Moments.
+                </p><br>
+                <p class="press">
+                    Refreshing Drinks Made for every mood<br>and every moment.
+                </p>
+            </div>
+            <div class="box13">
+                <h2 class="quick">QUICK LINKS</h2>
+                <a href="{% url 'home' %}" class="boot">Home</a><br><br>
+                <a href="{% url 'blog' %}" class="boot">Collections</a><br><br>
+                <a href="{% url 'about' %}" class="boot">About Us</a><br><br>
+                <a href="{% url 'contact' %}" class="boot">Contact </a><br><br>
+            </div>
+            <div class="box14">
+                <h2 class="quick">CONTACT US</h2>
+                <div class="box15">
+                    <a href="https://wa.me/2348069566534" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>    
+                    <span>08148451513/08033149784</span><br><br>
+                </div>
+                <div class="box15">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=okwusonventures@gmail.com" target="_blank">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
+                    <span>okwusonventures@gmail.com</span><br><br><br>
+                </div>
+                <div class="box15">
+                    <a href="https://www.google.com/maps/place/Wuse+Market/@9.0518971,7.3672694,13z/data=!4m10!1m2!2m1!1sSHOP+61+BLOCK+C+WUSE+MODERN+MARKET+ABUJA,FCT!3m6!1s0x104e0b13045b1c1b:0xfa5f8b95522e903!8m2!3d9.0680035!4d7.4660528!15sCixTSE9QIDYxIEJMT0NLIEMgV1VTRSBNT0RFUk4gTUFSS0VUIEFCVUpBLEZDVFouIixzaG9wIDYxIGJsb2NrIGMgd3VzZSBtb2Rlcm4gbWFya2V0IGFidWphIGZjdJIBBm1hcmtldJoBI0NoWkRTVWhOTUc5blMwVkpRMEZuU1VSS2QxbHRRMFZSRUFF4AEA-gEECAAQNQ!16s%2Fg%2F11h1dwpm2l?entry=ttu&g_ep=EgoyMDI2MDkxNC4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </a>
+                    <span>SHOP 61 BLOCK C WUSE<br> MODERN MARKET ABUJA,FCT </span><br> 
+                </div>
+            </div>
+            <div class="box18">
+                <h2 class="quick">FOLLOW US</h2>
+                <div class="icon">
+                    <a href="https://youtube.com/yourusername" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="https://tiktok.com/yourusername" target="_blank">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                    <a href="https://instagram.com/yourusername" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+                <footer>
+                    <P>&copy; <span id="copyright-year"></span> OKWUSON.<br> All Rights Reserved</P>
+                </footer>
+            </div>
+        </section>
+    </div>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/explore.css' %}">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>OKWUSON</title>
+</head>
+<body>
+    <div class=main>
+        <div class="container" id="container">
+            <img src="{% static 'img/chatgpttt.png' %}" height="100" width="100" class="we">
+            <h1 class="hi">OKWUSON</h1>
+            <div class="solid">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'blog' %}">Collections</a></li>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'contact' %}">Contact </a></li>
+                </ul>
+            </div>
+
+            <div>
+                <p class="p">ABOUT OKWUSON</p>
+                <h1 class="drinks">
+                    Great Drinks,<br> 
+                </h1>
+                <h1 class="red">Better Moments.</h1>
+                <p class="our">
+                    At OKWUSON, we believe that every moment<br>
+                    becomes better with the right drink.
+                </p>
+                <p class="goal">
+                    Our goal is to bring together a collection of<br>
+                    refreshing and enjoyable drinks that people<br>
+                    can enjoy at any time.
+                </p>
+            </div>
+
+            <h1 class="about">ABOUT US</h1>
+            <hr>
+        </div>
+
+        <section class="box1">
+            <h1 class="us">ABOUT US</h1>
+            <div class="box5">
+                <div class="box2">
+                    <div class="box3">
+                        <div class="box4">
+                            <div class="glass">
+                                <i class="fa-solid fa-whiskey-glass"></i>
+                            </div>
+                        </div>
+                        <h2 class="story">Our Story</h2>
+                        <p class="was">
+                            OKWUSON was created with a simple<br>
+                            idea: make discovering great drinks<br>
+                            easy, enjoyable and exciting.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="box2">
+                    <div class="box3">
+                        <div class="box4">
+                            <div class="glass">
+                                <i class="fa-solid fa-whiskey-glass"></i>
+                            </div>
+                        </div>
+                        <h2 class="story">Our Story</h2>
+                        <p class="was">
+                            OKWUSON was created with a simple<br>
+                            idea: make discovering great drinks<br>
+                            easy, enjoyable and exciting.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="box2">
+                    <div class="box3">
+                        <div class="box4">
+                            <div class="glass">
+                                <i class="fa-solid fa-whiskey-glass"></i>
+                            </div>
+                        </div>
+                        <h2 class="story">Our Story</h2>
+                        <p class="was">
+                            OKWUSON was created with a simple<br>
+                            idea: make discovering great drinks<br>
+                            easy, enjoyable and exciting.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <hr class="box">
+        <section class="box11">
+            <div class="box12">
+                <img src="{% static 'img/chatgpttt.png' %}" height="100" width="100" class="when">
+                <h1 class="hii">OKWUSON</h1>
+                <p class="pass">
+                    Great Drinks. Better Moments.
+                </p><br>
+                <p class="press">
+                    Refreshing Drinks Made for every mood<br>and every moment.
+                </p>
+            </div>
+            <div class="box13">
+                <h2 class="quick">QUICK LINKS</h2>
+                <a href="{% url 'home' %}" class="boot">Home</a><br><br>
+                <a href="{% url 'blog' %}" class="boot">Collections</a><br><br>
+                <a href="{% url 'about' %}" class="boot">About Us</a><br><br>
+                <a href="{% url 'contact' %}" class="boot">Contact </a><br><br>
+            </div>
+            <div class="box14">
+                <h2 class="quick">CONTACT US</h2>
+                <div class="box15">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>08069566534/08033149784</span><br><br>
+                </div>
+                <div class="box15">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>okwusonventures@gmail.com</span><br><br>
+                </div>
+                <div class="box15">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>SHOP 61 BLOCK C WUSE MODERN MARKET ABUJA,FCT </span><br> 
+                </div>
+            </div>
+            <div class="box18">
+                <h2 class="quick">FOLLOW US</h2>
+                <div class="icon">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+                <footer>
+                    <P>&copy; <span id="copyright-year"></span> OKWUSON.<br> All Rights Reserved</P>
+                </footer>
+            </div>
+        </section>
+    </div>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
+        

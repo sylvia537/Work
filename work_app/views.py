@@ -59,7 +59,8 @@ def signup(request):
     return render(request, 'signup.html', {'form': form})
 
 def login_view(request):
-    
+    if request.user.is_authenticated:
+        return redirect('home')
 
     if request.method == 'POST':
         form = LoginForm(data=request.POST)
