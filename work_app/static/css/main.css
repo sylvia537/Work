@@ -2105,69 +2105,83 @@ body{
     }
 }
 
-/* =========================
-   MOBILE FULL SCREEN
-========================= */
+/* ================================
+   MOBILE WELCOME SCREEN
+================================ */
 
 @media screen and (max-width: 600px) {
 
     html,
     body {
-        width: 100%;
-        min-width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-    }
-
-    body {
-        width: 100vw;
-        min-height: 100vh;
-    }
-
-    /* Main welcome/intro container */
-    .container,
-    .welcome,
-    .intro,
-    .landing,
-    .main {
         width: 100% !important;
-        max-width: 100% !important;
         min-width: 100% !important;
-        height: 100vh !important;
-        min-height: 100vh !important;
+        height: 100% !important;
+        min-height: 100% !important;
         margin: 0 !important;
         padding: 0 !important;
-        box-sizing: border-box;
+        overflow-x: hidden !important;
     }
 
-    /* Welcome content */
-    .container,
-    .welcome,
-    .intro,
-    .landing {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
+    .main-wrapper {
+        width: 100% !important;
+        min-width: 100% !important;
+        height: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: hidden !important;
     }
 
-    /* Title */
-    h1 {
-        font-size: 28px;
-        margin-top: 40px;
+    .welcome_screen {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+
+        width: 100vw !important;
+        min-width: 100vw !important;
+
+        height: 100vh !important;
+        height: 100dvh !important;
+        min-height: 100dvh !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+
+        box-sizing: border-box !important;
+        overflow: hidden !important;
     }
 
-    /* Welcome text */
-    .welcome-text {
-        font-size: 16px;
+    /* Drinkable */
+    .title {
+        font-size: 2rem !important;
+        margin: 0 0 5px 0 !important;
+        text-align: center !important;
+    }
+
+    /* Welcome Back */
+    .subtitle {
+        font-size: 1rem !important;
+        margin: 0 0 25px 0 !important;
+        text-align: center !important;
     }
 
     /* Drink image */
-    img {
-        max-width: 90%;
-        height: auto;
+    .graphic {
+        width: 260px !important;
+        max-width: 75vw !important;
+        height: auto !important;
+        margin: 0 auto 25px auto !important;
+        object-fit: contain !important;
     }
 
+    /* Click anywhere to continue */
+    .welcome_screen a {
+        font-size: 12px !important;
+        margin: 0 !important;
+        text-align: center !important;
+    }
 }
